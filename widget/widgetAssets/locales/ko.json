@@ -1,0 +1,19 @@
+{
+  "multiTableView": {
+    "EDIT_VIEW_TITLE": "멀티 테이블 편집 보기",
+    "WIDGET_VIEW_TITLE": "제목",
+    "TABLE_JSON_FIELD": "테이블 JSON 필드 선택",
+    "JSON_FIELD": "JSON 필드",
+    "JSON_FIELD_TOOLTIP": "테이블 데이터를 포함하는 JSON 필드를 선택하세요",
+    "JSON_FIELD_DEFAULT_VALUE": "필드 선택",
+    "TOP_LEVEL_KEY": "최상위 배열 키",
+    "ACCORDION_HEADING": "아코디언 제목 키",
+    "NESTED_KEY": "중첩 배열 키",
+    "ACTION_BTN_LABEL": "버튼 라벨",
+    "ACTION_BTN_TOOLTIP": "업데이트된 테이블 데이터를 저장할 버튼 라벨을 입력하세요",
+    "SAVE_BTN": "저장",
+    "CLOSE_BTN": "닫기",
+    "CONFIG_ERROR": "위젯 구성이 잘못되었습니다. 스키마 설정을 확인하세요.",
+    "DATA_NOT_AVAILABLE": "입력 데이터가 제공되지 않았습니다."
+  }
+}

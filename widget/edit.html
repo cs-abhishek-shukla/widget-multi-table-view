@@ -1,0 +1,73 @@
+<!-- Copyright start
+    MIT License
+    Copyright (c) 2025 Fortinet Inc
+Copyright end -->
+<form data-ng-submit="save()" class="noMargin" name="editMultiTableViewWidgetForm"
+    data-ng-class="{'state-wait': processing }" novalidate>
+    <div class="modal-header">
+        <h3 class="modal-title col-md-9">{{viewWidgetVars.EDIT_VIEW_TITLE}}</h3>
+        <button type="button" class="close" data-ng-click="cancel()" data-dismiss="modal" aria-label="Close"
+            id="close-edit-widget-form-btn">
+            <div aria-hidden="true" class="version-button">+</div>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-group"
+            data-ng-class="{ 'has-error': editMultiTableViewWidgetForm.title.$invalid && editMultiTableViewWidgetForm.title.$touched }">
+            <label for="title" class="control-label">{{viewWidgetVars.WIDGET_VIEW_TITLE}}
+            </label>
+            <input id="title" name="title" type="text" class="form-control" data-ng-model="config.title">
+        </div>
+        <div class="mertics-widget-border padding-top-md padding-bottom-md"></div>
+        <div class="margin-top-md margin-bottom-md">
+            <h6>{{viewWidgetVars.TABLE_JSON_FIELD}}</h6>
+        </div>
+        <div class="form-group"
+            data-ng-class="{ 'has-error': editMultiTableViewWidgetForm.tableJsonField.$invalid && editMultiTableViewWidgetForm.tableJsonField.$touched}">
+            <label for="tableJsonField" class="control-label">{{viewWidgetVars.JSON_FIELD}}<span class="text-danger">*</span></label>
+            <span data-uib-tooltip="{{viewWidgetVars.JSON_FIELD_TOOLTIP}}"
+                data-tooltip-append-to-body="true"><i class="margin-left-sm icon icon-information font-Size-13">
+                </i></span>
+            <select id="tableJsonField" name="tableJsonField" class="form-control" data-ng-model="config.jsonField"
+                data-ng-options="field.name as field.title for field in fieldsArray | orderBy: 'title'"
+                required="required">
+                <option value="" class="" selected="selected">{{viewWidgetVars.JSON_FIELD_DEFAULT_VALUE}}</option>
+            </select>
+            <div data-cs-messages="editMultiTableViewWidgetForm.tableJsonField"></div>
+        </div>
+        <div class="form-group"
+            data-ng-class="{ 'has-error': editMultiTableViewWidgetForm.topLevelArrayKey.$invalid && editMultiTableViewWidgetForm.topLevelArrayKey.$touched }">
+            <label for="topLevelArrayKey" class="control-label" data-ng-required="true" required="required">{{viewWidgetVars.TOP_LEVEL_KEY}}<span class="text-danger">*</span></label>
+            <input id="topLevelArrayKey" name="topLevelArrayKey" type="text" class="form-control"
+                data-ng-model="config.topLevelArrayKey">
+        </div>
+        <div class="form-group"
+            data-ng-class="{ 'has-error': editMultiTableViewWidgetForm.accordionHeading.$invalid && editMultiTableViewWidgetForm.accordionHeading.$touched }">
+            <label for="accordionHeading" class="control-label" data-ng-required="true" required="required">{{viewWidgetVars.ACCORDION_HEADING}}<span class="text-danger">*</span></label>
+            <input id="accordionHeading" name="accordionHeading" type="text" class="form-control"
+                data-ng-model="config.accordionHeading">
+        </div>
+        <div class="form-group"
+            data-ng-class="{ 'has-error': editMultiTableViewWidgetForm.nestedArrayKey.$invalid && editMultiTableViewWidgetForm.nestedArrayKey.$touched }">
+            <label for="nestedArrayKey" class="control-label" data-ng-required="true" required="required">{{viewWidgetVars.NESTED_KEY}}<span class="text-danger">*</span></label>
+            <input id="nestedArrayKey" name="nestedArrayKey" type="text" class="form-control"
+                data-ng-model="config.nestedArrayKey">
+        </div>
+        <div class="form-group"
+            data-ng-class="{ 'has-error': editMultiTableViewWidgetForm.buttonLabel.$invalid && editMultiTableViewWidgetForm.buttonLabel.$touched }">
+            <label for="buttonLabel" class="control-label">{{viewWidgetVars.ACTION_BTN_LABEL}}<span class="text-danger">*</span></label>
+            <span data-uib-tooltip="{{viewWidgetVars.ACTION_BTN_TOOLTIP}}"
+                data-tooltip-append-to-body="true"><i class="margin-left-sm icon icon-information font-Size-13">
+                </i></span>
+            <input id="buttonLabel" name="buttonLabel" type="text" class="form-control"
+                data-ng-model="config.buttonLabel" required="required">
+        </div>
+    </div>
+    </div>
+    <div class="modal-footer">
+        <button id="edit-widget-save" type="submit" class="btn btn-sm btn-primary"><i
+                class="icon icon-check margin-right-sm"></i>{{viewWidgetVars.SAVE_BTN}}</button>
+        <button id="edit-widget-cancel" type="button" class="btn btn-sm btn-default" data-ng-click="cancel()"><i
+                class="icon icon-close margin-right-sm"></i>{{viewWidgetVars.CLOSE_BTN}}</button>
+    </div>
+</form>

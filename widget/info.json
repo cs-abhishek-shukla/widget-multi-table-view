@@ -1,0 +1,20 @@
+{
+    "name": "multiTableView",
+    "title": "Multi Table View",
+    "subTitle": "Dynamic Table Viewer for Hierarchical JSON Data",
+    "version": "1.0.0",
+    "published_date": 1753961672,
+    "releaseNotes": "unavailable",
+    "metadata": {
+        "help_online": "",
+        "description": "This widget provides a user-friendly interface for displaying multiple related tables within an accordion structure, supporting intuitive row selection and data exploration.",
+        "pages": [
+            "View Panel"
+        ],
+        "certified": "Yes",
+        "publisher": "Fortinet",
+        "compatibility": [
+            "7.5.0"
+        ]
+    }
+}

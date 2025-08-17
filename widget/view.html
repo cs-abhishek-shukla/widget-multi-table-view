@@ -1,0 +1,83 @@
+<!-- Copyright start
+    MIT License
+    Copyright (c) 2025 Fortinet Inc
+Copyright end -->
+<link rel="stylesheet" type="text/css" href="multiTableView-1.0.0/widgetAssets/css/wizard-style.css" />
+<div class="widget widget-container chart" ng-class="{
+       'theme-light': theme.id === 'light',
+       'theme-dark': theme.id === 'dark',
+       'theme-space': theme.id === 'steel'
+     }">
+  <div class="display-flex-space-between margin-chart">
+    <div class="padding-right-0 padding-left-0 widget-dashboard-title-width">
+      <h5 ng-if="config && config.title" class="margin-top-0 margin-bottom-0 text-overflow margin-left-negative-15">
+        {{config.title}}</h5>
+    </div>
+  </div>
+  <div ng-hide="collapsed">
+    <div ng-if="invalidSchema" class="alert alert-danger text-center margin-top-md">
+      <strong>Error:</strong> {{viewWidgetVars.CONFIG_ERROR}}
+    </div>
+    <div ng-if="!hasData && !invalidSchema" class="alert alert-info text-center margin-top-md">
+      <strong>Info:</strong> {{viewWidgetVars.DATA_NOT_AVAILABLE}}
+    </div>
+    <div ng-if="hasData">
+      <uib-accordion ng-attr-close-others="{{allowCloseOthers ? true : undefined}}">
+        <div ng-repeat="accordionItem in config.jsonFieldValue[schema.topLevelArrayKey] track by $index"
+          class="service-table-render">
+          <div uib-accordion-group class="panel-default" style="width: 100%"
+            is-open="expanded[accordionItem[schema.accordionHeading]]" role="button"
+            aria-expanded="{{expanded[accordionItem[schema.accordionHeading]]}}" tabindex="0">
+            <uib-accordion-heading class="padding-md">
+              <div class="clearfix">
+                <div data-ng-class="{'queue-text-active-color': expanded[accordionItem[schema.accordionHeading]]}">
+                  <div class="margin-right-lg pull-left">
+                    <span class="queue-card-actions">&nbsp;<i class="fa"
+                        data-ng-class="expanded[accordionItem[schema.accordionHeading]] ? 'fa-chevron-down' : 'fa-chevron-right'"></i></span>
+                  </div>
+                  <div class="pull-left margin-right-3">
+                    {{ accordionItem[schema.accordionHeading] }}
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </uib-accordion-heading>
+            <div class="margin-bottom-lg margin-top-negative-10">
+              <table class="data-center-table panel-body">
+                <thead>
+                  <tr>
+                    <th class="data-center-header">
+                      <input type="checkbox" ng-model="masterSelected[accordionItem[schema.accordionHeading]]"
+                        ng-change="toggleAll(accordionItem)" />
+                    </th>
+                    <th class="data-center-header" ng-repeat="col in getColumns(accordionItem) track by $index">
+                      {{ col }}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="nestedItem in accordionItem[schema.nestedArrayKey] track by $index"
+                    class="data-center-row">
+                    <td class="data-center-cell">
+                      <input type="checkbox" ng-model="nestedItem.selected"
+                        ng-change="checkMasterSelection(accordionItem[schema.accordionHeading])" />
+                    </td>
+                    <td class="data-center-cell" ng-repeat="col in getColumns(accordionItem) track by $index">
+                      {{ nestedItem[col] }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </uib-accordion>
+      <div class="margin-bottom-lg margin-top-11">
+        <button data-ng-disabled="!isTableUpdated" ng-click="saveSelection()"
+          class="btn btn-primary btn-sm ng-binding"><i
+            class="margin-right-sm icon icon-publish"></i>{{config.buttonLabel}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

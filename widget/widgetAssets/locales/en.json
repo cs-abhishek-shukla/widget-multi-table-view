@@ -1,0 +1,19 @@
+{
+    "multiTableView": {
+        "EDIT_VIEW_TITLE": "Multi Table Edit View",
+        "WIDGET_VIEW_TITLE": "Title",
+        "TABLE_JSON_FIELD": "Select Table JSON Field",
+        "JSON_FIELD": "JSON Field ",
+        "JSON_FIELD_TOOLTIP": "Select the JSON field that contains the table data",
+        "JSON_FIELD_DEFAULT_VALUE": "Select a field",
+        "TOP_LEVEL_KEY": "Top Level Array Key ",
+        "ACCORDION_HEADING": "Accordion Heading Key ",
+        "NESTED_KEY": "Nested Array Key ",
+        "ACTION_BTN_LABEL": "Button Label ",
+        "ACTION_BTN_TOOLTIP": "Enter the button lable to save the updated table data",
+        "SAVE_BTN": "Save",
+        "CLOSE_BTN": "Close",
+        "CONFIG_ERROR": "Widget configuration is invalid. Please check schema settings.",
+        "DATA_NOT_AVAILABLE": "No input data provided."
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "multiTableView": {
+    "EDIT_VIEW_TITLE": "多表编辑视图",
+    "WIDGET_VIEW_TITLE": "标题",
+    "TABLE_JSON_FIELD": "选择表格JSON字段",
+    "JSON_FIELD": "JSON字段",
+    "JSON_FIELD_TOOLTIP": "选择包含表格数据的JSON字段",
+    "JSON_FIELD_DEFAULT_VALUE": "选择字段",
+    "TOP_LEVEL_KEY": "顶级数组键",
+    "ACCORDION_HEADING": "手风琴标题键",
+    "NESTED_KEY": "嵌套数组键",
+    "ACTION_BTN_LABEL": "按钮标签",
+    "ACTION_BTN_TOOLTIP": "输入按钮标签以保存更新后的表格数据",
+    "SAVE_BTN": "保存",
+    "CLOSE_BTN": "关闭",
+    "CONFIG_ERROR": "小部件配置无效。请检查模式设置。",
+    "DATA_NOT_AVAILABLE": "未提供输入数据。"
+  }
+}
