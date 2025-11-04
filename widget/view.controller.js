@@ -55,10 +55,6 @@ Copyright end */
       }).$promise.then(function (result) {
         $timeout(function () {
           const newValue = result[$scope.config.jsonField];
-          console.log('Fetched result from Modules.get:', result);
-          console.log('Expected field:', $scope.config.jsonField);
-          console.log('Resolved value:', newValue);
-
           if (newValue !== undefined && newValue !== null) {
             $scope.config.jsonFieldValue = newValue;
             $scope.isTableUpdated = false;
@@ -192,8 +188,6 @@ Copyright end */
       if (!schema.nestedArrayKey || !firstAccordionItem[schema.nestedArrayKey] || firstAccordionItem[schema.nestedArrayKey].length === 0) {
         schema.nestedArrayKey = 'items';
       }
-
-      console.log('Detected Schema:', schema);
       return schema;
     }
 
@@ -229,6 +223,7 @@ Copyright end */
     }
 
     function init() {
+      widgetServiceSubscribe();
       _setCardColors();
       _handleTranslations();
       $scope.entity = FormEntityService.get();
@@ -302,7 +297,5 @@ Copyright end */
     fetchAndRender();
 
     // 3. Subscribe to real-time updates.
-    widgetServiceSubscribe();
-
   }
 })();
