@@ -6,11 +6,11 @@ Copyright end */
 (function () {
   angular
     .module('cybersponse')
-    .controller('multiTableView100DevCtrl', multiTableView100DevCtrl);
+    .controller('multiTableView100Ctrl', multiTableView100Ctrl);
 
-  multiTableView100DevCtrl.$inject = ['$scope', 'widgetUtilityService', 'FormEntityService', '$controller', 'API', '$resource', 'websocketService', 'Modules', '$interval', '$timeout', '$rootScope', 'toaster'];
+  multiTableView100Ctrl.$inject = ['$scope', 'widgetUtilityService', 'FormEntityService', '$controller', 'API', '$resource', 'websocketService', 'Modules', '$interval', '$timeout', '$rootScope', 'toaster'];
 
-  function multiTableView100DevCtrl($scope, widgetUtilityService, FormEntityService, $controller, API, $resource, websocketService, Modules, $interval, $timeout, $rootScope, toaster) {
+  function multiTableView100Ctrl($scope, widgetUtilityService, FormEntityService, $controller, API, $resource, websocketService, Modules, $interval, $timeout, $rootScope, toaster) {
     $controller('BaseConnectorCtrl', { $scope: $scope });
 
     $scope.expanded = {};

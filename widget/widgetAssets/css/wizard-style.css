@@ -5,8 +5,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-a {
-    color: #00bfff;
+.widget-container a {
+  color: #00bfff !important;
 }
 
 .service-summary {

@@ -6,7 +6,7 @@
     "published_date": 1753961672,
     "releaseNotes": "unavailable",
     "metadata": {
-        "help_online": "",
+        "help_online": "https:\/\/github.com\/fortinet-fortisoar\/widget-multi-table-view\/blob\/release\/1.0.0\/README.md",
         "description": "This widget provides a user-friendly interface for displaying multiple related tables within an accordion structure, supporting intuitive row selection and data exploration.",
         "pages": [
             "View Panel"
@@ -16,5 +16,6 @@
         "compatibility": [
             "7.5.0"
         ]
-    }
+    },
+    "development": false
 }

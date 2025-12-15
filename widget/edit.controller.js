@@ -6,11 +6,11 @@ Copyright end */
 (function () {
   angular
     .module('cybersponse')
-    .controller('editMultiTableView100DevCtrl', editMultiTableView100DevCtrl);
+    .controller('editMultiTableView100Ctrl', editMultiTableView100Ctrl);
 
-  editMultiTableView100DevCtrl.$inject = ['$scope', '$uibModalInstance', 'config', 'widgetUtilityService', '$timeout', 'FormEntityService'];
+  editMultiTableView100Ctrl.$inject = ['$scope', '$uibModalInstance', 'config', 'widgetUtilityService', '$timeout', 'FormEntityService'];
 
-  function editMultiTableView100DevCtrl($scope, $uibModalInstance, config, widgetUtilityService, $timeout, FormEntityService) {
+  function editMultiTableView100Ctrl($scope, $uibModalInstance, config, widgetUtilityService, $timeout, FormEntityService) {
     $scope.cancel = cancel;
     $scope.save = save;
     $scope.config = config;
