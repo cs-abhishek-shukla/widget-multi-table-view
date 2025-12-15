@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Base Styles (applies to all themes)
+   ========================================================================== */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.widget-container a {
+  color: #00bfff !important;
+}
+
+.service-summary {
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.data-center-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.data-center-header {
+    text-align: left;
+    border: none;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.data-center-cell {
+    text-align: left;
+    border: none;
+    padding: 8px;
+    font-size: 13px;
+}
+
+/* Hover effect for all themes (color per theme below) */
+.data-center-table tbody tr:hover {
+    transition: background-color 0.2s ease;
+}
+
+/* ==========================================================================
+   Accordion and Panel Styling (Common)
+   ========================================================================== */
+.service-table-render .panel-heading {
+    align-content: center;
+    background-color: transparent !important;
+}
+
+.service-table-render>uib-accordion .panel-group {
+    margin-bottom: 6px;
+}
+
+.accordion-heading-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-heading-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.queue-card-actions i {
+    font-size: 13px !important;
+    vertical-align: middle;
+}
+
+.queue-card-header-text {
+    font-size: 13px !important;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.queue-text-active-color {
+    color: #00bfff;
+}
+
+
+/* ==========================================================================
+   Theme: Space (Updated with more distinct alternating row colors)
+   ========================================================================== */
+.theme-space {
+    background-color: transparent;
+    color: #f0f0f0;
+}
+
+.theme-space .service-summary {
+    color: #00bfff;
+}
+
+.theme-space .data-center-table {
+    background-color: #222933;
+}
+
+/* Odd rows in Space theme: Lighter shade */
+.theme-space .data-center-table tbody tr {
+    background-color: rgb(27, 36, 48);
+}
+
+/* Even rows in Space theme: Darker shade */
+.theme-space .data-center-table tbody tr:nth-child(even) {
+    background-color: rgb(27, 36, 48);
+}
+
+/* Header for Space theme */
+.theme-space .data-center-table thead th {
+    background-color: rgb(33, 44, 58);
+}
+
+/* Hover for Space theme */
+.theme-space .data-center-table tbody tr:hover {
+    background-color: rgb(50, 59, 71);
+}
+
+/* ==========================================================================
+   Theme: Light
+   ========================================================================== */
+.theme-light {
+    background-color: transparent;
+    color: #343a40;
+}
+
+.theme-light .service-summary {
+    color: #007bff;
+}
+
+.theme-light .data-center-table {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Odd rows in Light theme: Lighter shade */
+.theme-light .data-center-table tbody tr {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Even rows in Light theme: Darker shade */
+.theme-light .data-center-table tbody tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Header for Light theme */
+.theme-light .data-center-table thead th {
+    background-color: rgb(240, 240, 240);
+}
+
+/* Hover for Light theme */
+.theme-light .data-center-table tbody tr:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+/* ==========================================================================
+   Theme: Dark
+   ========================================================================== */
+.theme-dark {
+    background-color: transparent;
+    color: #e9ecef;
+}
+
+.theme-dark .service-summary {
+    color: #8ab4f8;
+}
+
+.theme-dark .data-center-table {
+    background-color: #2c3034;
+}
+
+/* Odd rows in Dark theme: Lighter shade */
+.theme-dark .data-center-table tbody tr {
+    background-color: rgb(22, 22, 22);
+}
+
+/* Even rows in Dark theme: Darker shade */
+.theme-dark .data-center-table tbody tr:nth-child(even) {
+    background-color: rgb(22, 22, 22);
+}
+
+/* Header for Dark theme */
+.theme-dark .data-center-table thead th {
+    background-color: rgb(35, 35, 35);
+}
+
+/* Hover for Dark theme */
+.theme-dark .data-center-table tbody tr:hover {
+    background-color: rgb(43, 43, 43);
+}

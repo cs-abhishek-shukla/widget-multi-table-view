@@ -1,0 +1,19 @@
+{
+  "multiTableView": {
+    "EDIT_VIEW_TITLE": "マルチテーブル編集ビュー",
+    "WIDGET_VIEW_TITLE": "タイトル",
+    "TABLE_JSON_FIELD": "テーブルのJSONフィールドを選択",
+    "JSON_FIELD": "JSONフィールド",
+    "JSON_FIELD_TOOLTIP": "テーブルデータを含むJSONフィールドを選択してください",
+    "JSON_FIELD_DEFAULT_VALUE": "フィールドを選択",
+    "TOP_LEVEL_KEY": "トップレベル配列キー",
+    "ACCORDION_HEADING": "アコーディオン見出しキー",
+    "NESTED_KEY": "ネストされた配列キー",
+    "ACTION_BTN_LABEL": "ボタンラベル",
+    "ACTION_BTN_TOOLTIP": "更新されたテーブルデータを保存するボタンラベルを入力してください",
+    "SAVE_BTN": "保存",
+    "CLOSE_BTN": "閉じる",
+    "CONFIG_ERROR": "ウィジェット設定が無効です。スキーマ設定を確認してください。",
+    "DATA_NOT_AVAILABLE": "入力データが提供されていません。"
+  }
+}
