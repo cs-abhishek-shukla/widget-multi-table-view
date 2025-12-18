@@ -12,6 +12,8 @@
 
 The following table lays out necessary information to customize this widget.
 
+![](./res/edit-multitable-widget.png)
+
 | Field Name                | Description                                                           |
 |---------------------------|-----------------------------------------------------------------------|
 | **Title**                 | Title displayed at the top of the rendered widget.                    |
